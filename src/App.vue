@@ -1,5 +1,5 @@
 <template>
-      <div class="container-fluid">
+      <div class="container-fluid" >
         <nav v-show="showNav" class="navbar fixed-top navbar-expand-lg bg-body-tertiary" id="nav">
             <div class="container-fluid">
                 <div class="contenedorImaLogo" style="margin-left: 30px;">
@@ -19,8 +19,8 @@
                             <ul class="dropdown-menu" style="color:black">
                               <li><a class="dropdown-item" href="#"><router-link to="/">Principal</router-link></a></li>
                             <li><a class="dropdown-item" href="#"><router-link to="/historia">Historia</router-link></a></li>
-                            <li><a class="dropdown-item" href="#"><router-link to="/proyectos">Proyectos</router-link></a></li>
-                            <li><a class="dropdown-item" href="#"></a>Unetenos</li>
+                            <li><a class="dropdown-item" href="#"><router-link to="/proyectos">Equipo</router-link></a></li>
+                            <!-- <li><a class="dropdown-item" href="#"></a>Unetenos</li> -->
                             </ul>
                         </li>
                     <li class="nav-item">
@@ -50,11 +50,12 @@
 import {ref , computed, reactive} from "vue"
 import Swal from 'sweetalert2';
 import { useWindowSize } from 'vue-window-size';
+import $ from 'jquery'
 // import {MenuIcon} from 'vue-material-design-icons/Menu.vue';
 export default {
   setup() {
   // new Swal('Bievenido a luz a las Naciones');
-
+    $('#nav')
 
 // MOSTRAR LAS SWEETALERT EN ABOUT US 
 function mision(value) {

@@ -14,6 +14,11 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 import {createRouter, createWebHashHistory} from 'vue-router'
 import {routes} from './routes/routes.js'
 import 'animate.css';
+import $ from 'jquery';
+
+
+// import jsdom from 'jsdom'
+
 
 const router = createRouter({
     history: createWebHashHistory(),
@@ -28,4 +33,5 @@ const myApp = createApp(App);
 myApp.use(materialIcons);
 myApp.use(VueSweetalert2)
 myApp.use(router)
+myApp.use($)
 myApp.mount('#app');

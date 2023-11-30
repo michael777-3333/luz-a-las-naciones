@@ -47,25 +47,25 @@
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner ">
         <div class="carousel-item active ">
-          <img src="src/assets/img/puente tierra 2.png" class="imgCarrusel d-block w-100 " alt="...">
-          <div class="row titleCarrusel" style="color: #fff; width: 700px;">
+          <img src="src/assets/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100 " alt="...">
+          <div class="row titleCarrusel" style="color: #900D0D; width: 700px; text-transform: uppercase;">
             <div class="col-12">
               <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12 ">
-              <img class="imgLogo animate__animated animate__heartBeat" src="src/assets/img/logo2.png" alt="">
+              <img class="imgLogo" src="src/assets/img/logo2.png" alt="">
             </div>
 
           </div>
         </div>
         <div class="carousel-item">
-          <img src="src/assets/img/graduacion.png" class="imgCarrusel d-block w-100" alt="...">
-          <div class="row titleCarrusel" style="color: #fff; width: 700px;">
+          <img src="src/assets/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100" alt="...">
+          <div class="row titleCarrusel" style="color: #900D0D; width: 700px; text-transform: uppercase;">
             <div class="col-12">
-              <h1 class="titleLogo">Luz a las naciones</h1>
+              <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12">
-              <img class="imgLogo animate__animated animate__heartBeat" src="src/assets/img/logo2.png" alt="">
+              <img class="imgLogo " src="src/assets/img/logo2.png" alt="">
             </div>
 
           </div>
@@ -73,12 +73,12 @@
         </div>
         <div class="carousel-item">
           <img src="src/assets/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100" alt="...">
-          <div class="row titleCarrusel" style="color: #fff; width: 700px;">
+          <div class="row titleCarrusel" style="color: #900D0D; width: 700px; text-transform: uppercase;">
             <div class="col-12">
-              <h1 class="titleLogo">Luz a las naciones</h1>
+              <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12">
-              <img class="imgLogo animate__animated animate__heartBeat" src="src/assets/img/logo2.png" alt="">
+              <img class="imgLogo" src="src/assets/img/logo2.png" alt="">
             </div>
 
           </div>
@@ -135,7 +135,8 @@
 
           </div>
           <button type="button" class="btn btn-img d-flex justify-content-center" @click="mision('mision')" id="mision">
-            <i id="" class="bi bi-arrow-up-right-circle" style="font-size: 30px; color: #fff;"></i>
+            
+            <i class="bi bi-arrow-left-circle" style="font-size: 30px; color: #fff;"></i>
           </button>
         </div>
 
@@ -152,7 +153,7 @@
             <!-- <button class="btn btn-card ">Mas</button> -->
           </div>
           <button class="btn btn-img d-flex justify-content-center" @click="mision('vision')">
-            <i class="bi bi-arrow-up-right-circle" style="font-size: 30px; color: #fff;"></i>
+            <i class="bi bi-arrow-left-circle" style="font-size: 30px; color: #fff;"></i>
           </button>
         </div>
 
@@ -171,7 +172,7 @@
 
           </div>
           <button class="btn btn-img d-flex justify-content-center" id="historia" @click="mision('historia')">
-            <i class="bi bi-arrow-up-right-circle" style="font-size: 30px; color: #fff;"></i>
+            <i class="bi bi-arrow-left-circle" style="font-size: 30px; color: #fff;"></i>
           </button>
         </div>
 
@@ -271,11 +272,11 @@
 
             <div class="row">
               <div class="titlesProyects d-flex justify-content-ms-center justify-content-lg-center align-items-end">
-                <h4 v-if="count == 0" class="titles animate__animated animate__bounceIn">Palo Cortado</h4>
-                <h4 v-if="count == 1" class="titles animate__animated animate__bounceIn">Puente Tierra</h4>
-                <h4 v-if="count == 2" class="titles animate__animated animate__bounceIn">Macanillo</h4>
-                <h4 v-if="count == 3" class="titles animate__animated animate__bounceIn">Jose A. Galan</h4>
-                <h4 v-if="count == 4" class="titles animate__animated animate__bounceIn">Puerta a Puerta</h4>
+                <h4 v-if="count == 0" class="titles titlesProyecto animate__animated animate__bounceIn">Palo Cortado</h4>
+                <h4 v-if="count == 1" class="titles titlesProyecto animate__animated animate__bounceIn">Puente Tierra</h4>
+                <h4 v-if="count == 2" class="titles titlesProyecto animate__animated animate__bounceIn">Macanillo</h4>
+                <h4 v-if="count == 3" class="titles titlesProyecto animate__animated animate__bounceIn">Jose A. Galan</h4>
+                <h4 v-if="count == 4" class="titles titlesProyecto animate__animated animate__bounceIn">Puerta a Puerta</h4>
               </div>
               <div class="">
                 <p v-if="count == 0"
@@ -388,12 +389,11 @@
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body2">
             <h2 class="card-title">Unetenos</h2>
-            <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore earum facilis totam
-              molestiae, dicta sequi ad repudiandae maiores? Laboriosam, qui?</p>
+            <p class="card-info">Se parte de este bonito proyecto, unetenos y hagamos un mundo mejor, contactonos via email, redes sociales o dejanos tu mensaje en nuestro buzon </p>
             <!-- <button class="btn btn-card ">Mas</button> -->
           </div>
           <button class="btn btn-img d-flex justify-content-center">
-            <i class="bi bi-arrow-up-right-circle" style="font-size: 30px; color: #fff;"></i>
+            <i class="bi bi-arrow-up-right-circle" style="font-size: 30px; color: #fff;"> <a class="nav-link active" href="#contactanos"></a></i>
           </button>
         </div>
 
@@ -405,8 +405,7 @@
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body2">
             <h2 class="card-title">Testimonios</h2>
-            <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore earum facilis totam
-              molestiae, dicta sequi ad repudiandae maiores? Laboriosam, qui?</p>
+            <p class="card-info">los testimonos de las personasa a las que hemos ayudada, creo que es lo mejor habla de nostros como fundación, dale click en botón</p>
 
 
           </div>
@@ -423,13 +422,14 @@
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body2">
             <h2 class="card-title">Maestros</h2>
-            <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore earum facilis totam
-              molestiae, dicta sequi ad repudiandae maiores? Laboriosam, qui?</p>
+            <p class="card-info">Tenemos un grupo capacitado de maestros, unos de ellos en este momento estudiando Teologia, sabiendo como prioridad que tenemos que enviar un mensaje de amor y salvacón como lo hizo jesús, dale click en el botón y conoce cada uno de ellos</p>
 
 
           </div>
-          <button class="btn btn-img d-flex justify-content-center">
+          <button @click="maestros()" class="btn btn-img d-flex justify-content-center">
             <i class="bi bi-arrow-up-right-circle" style="font-size: 30px; color: #fff;"></i>
+            roter
+            
           </button>
         </div>
 
@@ -457,19 +457,10 @@
           style="width: 300px; height: 300px; border-radius: 30px;">
       </div>
     </div>
-    <div v-show="showSelectImg" v-for="(item, index) in srcGaleriComplete" class="full-img " style="display: flex;"
-      id="filBox">
-      <button class="btn btn" style="color: #fff; font-size: 30px;">
-        <i class="bi bi-arrow-left-circle-fill" @click="prevuisImg()"></i>
-      </button>
-      <img class="animate__animated animate__bounceIn" v-bind:src="imgSelect" id="fullimg" alt="">
-      <button class="btn btn" style="color: #fff; font-size: 30px; margin-bottom: 600px;">
-        <i class="bi bi-x-octagon" @click="closeImg()"></i>
-      </button>
-      <button class="btn btn" style="color: #fff; font-size: 30px;">
-        <i class="bi bi-arrow-right-circle-fill" @click="nextImg()"></i>
-      </button>
-    </div>
+
+
+
+    
     <div class="row ">
       <div class="d-flex justify-content-center">
         <a href="src/assets/img/galeria.html">
@@ -480,61 +471,78 @@
     <div style="height: 30px;"></div>
   </div>
 
+    <!-- <div class="row full-img" v-show="showSelectImg" style="display: flex;" id="filBox">
+       <div style="height: 20px;"></div>
+       <div class="col-12 d-flex justify-content-end">
+        <button class="btn btn" style="color: #fff; font-size: 30px;">
+          <i class="bi bi-x-octagon" @click="closeImg()"></i>
+        </button>
+       </div>
+      <div class="col-12 d-flex justify-content-center" >
+        <img class="imgSelecGalery animate__animated animate__bounceIn" v-bind:src="imgSelect" id="fullimg" alt="">
+      </div>
+          
+          <div class="col-6 d-flex justify-content-end">
+            <button class="btn btn"  style="color: #fff; font-size: 30px;">
+              <i class="bi bi-arrow-left-circle-fill" @click="prevuisImg()"></i>
+            </button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn" style="color: #fff; font-size: 30px;">
+              <i class="bi bi-arrow-right-circle-fill" @click="nextImg()"></i>
+            </button>
+          </div>
+    </div> -->
+
+
   <!-- FOOTER  -->
 
   <div class="container-fluid" style="background-color: #f8efed;" id="contactanos">
-    <div style="height: 50px;"></div>
+    <section id="contactanos">
+      <div style="height: 50px;"></div>
     <div class="row d-flex justify-content-xs-center justify-content-sm-center justify-content-md-center">
-      <div class="col-xs-auto col-sm-6 col-md-6 col-lg-3 m-sm-3 m-md-3 m-lg-0 ">
+      <div class="col-xs-auto col-sm-6 col-md-6 col-lg-3 m-sm-3 m-md-3 m-lg-0 d-flex align-items-center">
         <div class="imgFooter d-flex justify-content-center" style="margin-left: 30px;"> <img
             src="src/assets/img/logo2.png" alt="" style="width: 200px; height: 100px; border-radius: 10px;"></div>
       </div>
-      <div class="col-xs-auto col-sm-6 col-md-6 col-lg-3 d-flex justify-content-center  m-sm-3 m-md-3 m-lg-0 ">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <h5>
-              Fundación luz a las naciones
-            </h5>
-          </div>
-          <div class="col-12 d-flex justify-content-center " style="padding-left: 60px;">
-            <p class="">somos una fundacion sin animo de lucro, solo con el fin de llevar el evangelio a toda persona
-              que lo necesite </p>
-          </div>
-        </div>
-      </div>
+      <!-- <div class="col-xs-auto col-sm-6 col-md-6 col-lg-3 d-flex justify-content-center  m-sm-3 m-md-3 m-lg-0 ">
+        
+      </div> -->
       <div class="col-xs-auto col-sm-6 col-md-6 col-lg-3 m-sm-3 m-md-3 m-lg-0">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <h5>Enlaces</h5>
+        <h6 class="titles">Contactanos</h6>
+        <div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
           </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Nombre">
+          <label for="floatingPassword">Nombre</label>
         </div>
-        <div class="row">
-          <div class="col-12 d-flex justify-content-center">
-            <a href="#galeria" style="color: #000000; text-decoration: none;">Galeria</a>
-          </div>
-          <div class="col-12 d-flex justify-content-center">
-            <a href="#carrusel " style="color: #000000; text-decoration: none;">Carrusel</a>
-          </div>
+        <div class="form-floating my-3">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+          <label for="floatingTextarea2">Comments</label>
+        </div>
         </div>
       </div>
-      <div class="col-xs-auto col-sm-6 col-md-6 col-lg-3  m-sm-3 m-md-3 m-lg-0 m-xxl-0">
-        <div class="row">
-          <div class="col-4 d-flex justify-content-center">
+      <div class="redes col-xs-auto col-sm-6 col-md-6 col-lg-3  m-sm-3 m-md-3 m-lg-0 m-xxl-0">
+       
+          <div class=" d-flex justify-content-center">
             <a href="">
               <img src="src/assets/img/facebook.png" style="width: 50px; height: 50px" alt="">
             </a>
           </div>
-          <div class="col-4 d-flex justify-content-center">
+          <div class=" d-flex justify-content-center">
             <a href="">
               <img src="src/assets/img/gmail.png" style="width: 50px; height: 50px" alt="">
             </a>
           </div>
-          <div class="col-4 d-flex justify-content-center">
+          <div class=" d-flex justify-content-center">
             <a href="">
               <img src="src/assets/img/instagram.png" style="width: 50px; height: 50px " alt="">
             </a>
           </div>
-        </div>
+        
       </div>
     </div>
     <div style="height: 30px;"></div>
@@ -543,6 +551,8 @@
         LUZ A LAS NACIONES ©
       </p>
     </div>
+    </section>
+ 
   </div>
 </template>
 <script >
@@ -566,30 +576,27 @@ export default {
         Swal.fire(
           'Misión',
           'Nuestra Mision es principalmente enviar un mensaje de amor en Cristo Jesús a toda familia, enfoncandonos principalmente en los niños donde ellos puedan recibir de la palabra de Dios, crescan en sabiduría y amor, enseñando la palabra y como seguirla a las familias y las nuevas generaciones que serán el futuro de la humanidad  ',
-          'question'
+          // 'question'
         )
       } else if (value == 'vision') {
         Swal.fire(
           'Visión',
           'Nuestra visión es cada una de las familias y niños donde hemos visitado, reciban a Jesús como su señor y salvador, donde entiendan que no están solos que hay un Dios que los ama, y asi como ellos recibieron de la palabra lo compartan con sus amigos y conocidos y la fundación luz a las Naciones crezca  ',
-          'question'
+          // 'question'
         )
       } else if (value == 'historia') {
         Swal.fire({
           'title': 'Historia',
           'text': 'Nuestra Historia como fundación nace de una idea de nuestro fundador Juan Carlos Bennet con su esposa Patricia Bennet, ellos al ser colombianos, pero viviendo en norte america conocian la necesidad de las familias y niños colombianos, entonces con su esposa decidieron crear una fundacion llamada Luz a las Naciones, Juan Bennet creo una iglesia virtual...',
           'confirmButtonText': 'Toda la Historia',
-          'icon': 'question',
+          // 'icon': 'question',
           showCancelButton: true,
           showCloseButton: true
         }
         ).then((result) => {
 
           if (result.isConfirmed) {
-
             router.push({ path: '/historia', replace: true })
-
-
           }
         })
       }
@@ -689,6 +696,9 @@ export default {
       }
     }
 
+    function maestros(params) {
+      router.push({ path: '/proyectos', replace: true })
+    }
 
     // QUITAR ALGUNAS FOTOS EN GALERIA DEPENDIENDO SI EL TAMANO DE LA PANTALLA ES DE CELULAR
     const { width, height } = useWindowSize();
@@ -696,7 +706,7 @@ export default {
     return {
       mision,
       showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,
-      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack
+      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros
     }
   }
 

@@ -152,7 +152,7 @@ export default {
         id:1,
         name: "Juan Bennet",
         tipo: "Pastor Fundador",
-        img: "src/assets/img/maestros/juan.jpg",
+        img: "/src/assets/img/maestros/juan.jpg",
       },
       {
         id:2,
@@ -167,7 +167,7 @@ export default {
         id:3,
         name: "Magda Suarez",
         tipo: "Coordinadora",
-        img: "src/assets/img/maestros/magda.jpg",
+        img: "/src/assets/img/maestros/magda.jpg",
       },
     ]);
 
@@ -176,20 +176,20 @@ export default {
         id:4,
         name: "Leonardo Fiallo",
         tipo: "Maestra",
-        img: "src/assets/img/maestros/leo.jpg",
+        img: "/src/assets/img/maestros/leo.jpg",
         visible:true
       },
       {
         id:5,
         name: "Maria Porras",
         tipo: "Maestra",
-        img: "src/assets/img/maestros/maria.jpg",
+        img: "/src/assets/img/maestros/maria.jpg",
       },
       {
         id:6,
         name: "Miguel Duran",
         tipo: "Pastor",
-        img: "src/assets/img/maestros/miguel.jpg",
+        img: "/src/assets/img/maestros/miguel.jpg",
       },
 
     ]);
@@ -199,13 +199,13 @@ export default {
         id:7,
         name: "Isaac Inca",
         tipo: "Ayudante",
-        img: "src/assets/img/maestros/isaac2.jpg",
+        img: "/src/assets/img/maestros/isaac2.jpg",
       },
       {
         id:8,
         name: "Michael Sarmiento",
         tipo: "Ayudante",
-        img: "src/assets/img/maestros/michael.jpg",
+        img: "/src/assets/img/maestros/michael.jpg",
       },
     ]);
 
@@ -218,13 +218,13 @@ export default {
                   id:9,
         name: "Laura Galviz",
         tipo: "Maestra",
-        img: "src/assets/img/maestros/laura.jpg",
+        img: "/src/assets/img/maestros/laura.jpg",
       },
       {
         id:10,
         name: "Doris",
         tipo: "Maestra",
-        img: "src/assets/img/maestros/doris.jpg",
+        img: "/src/assets/img/maestros/doris.jpg",
       },
         ]
       }
@@ -236,20 +236,20 @@ export default {
         id:4,
         name: "Leonardo Fiallo",
         tipo: "Maestra",
-        img: "src/assets/img/maestros/leo.jpg",
+        img: "/src/assets/img/maestros/leo.jpg",
         visible:true
       },
       {
         id:5,
         name: "Maria Porras",
         tipo: "Maestra",
-        img: "src/assets/img/maestros/maria.jpg",
+        img: "/src/assets/img/maestros/maria.jpg",
       },
       {
         id:6,
         name: "Miguel Duran",
         tipo: "Pastor",
-        img: "src/assets/img/maestros/miguel.jpg",
+        img: "/src/assets/img/maestros/miguel.jpg",
       },
         ]
       }
@@ -272,20 +272,20 @@ export default {
         id:4,
         name: "Leonardo Fiallo",
         tipo: "Maestra",
-        img: "src/assets/img/maestros/leo.jpg",
+        img: "/src/assets/img/maestros/leo.jpg",
         visible:true
       },
       {
         id:5,
         name: "Maria Porras",
         tipo: "Maestra",
-        img: "src/assets/img/maestros/maria.jpg",
+        img: "/src/assets/img/maestros/maria.jpg",
       },
       {
         id:6,
         name: "Miguel Duran",
         tipo: "Pastor",
-        img: "src/assets/img/maestros/miguel.jpg",
+        img: "/src/assets/img/maestros/miguel.jpg",
       },
         ]
       }
@@ -296,13 +296,13 @@ export default {
         id:9,
         name: "Laura Galviz",
         tipo: "Maestra",
-        img: "src/assets/img/maestros/laura.jpg",
+        img: "/src/assets/img/maestros/laura.jpg",
       },
       {
         id:10,
         name: "Doris",
         tipo: "Maestra",
-        img: "src/assets/img/maestros/doris.jpg",
+        img: "/src/assets/img/maestros/doris.jpg",
       },
       ]
       }

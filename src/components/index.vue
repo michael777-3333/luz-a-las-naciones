@@ -622,14 +622,14 @@ export default {
     // SHOW THE INDEX IMG OF GALERY 
 
     let srcGaleriComplete = ref([
-      'src/assets/img/galeria2/galeria1.png',
-      'src/assets/img/galeria2/galeria2-fotor-20230624124312.png',
-      'src/assets/img/galeria2/galeria3-fotor-20230624124331.png',
-      'src/assets/img/galeria2/galeria4-fotor-20230624124350.png',
-      'src/assets/img/galeria2/galeria5-fotor-20230624124413.png',
-      'src/assets/img/galeria2/galeria6-fotor-20230624124427.png',
-      'src/assets/img/galeria2/galeria7-fotor-20230624124444.png',
-      'src/assets/img/galeria2/galeria8-fotor-20230624124516.png'
+      '/src/assets/img/galeria2/galeria1.png',
+      '/src/assets/img/galeria2/galeria2-fotor-20230624124312.png',
+      '/src/assets/img/galeria2/galeria3-fotor-20230624124331.png',
+      '/src/assets/img/galeria2/galeria4-fotor-20230624124350.png',
+      '/src/assets/img/galeria2/galeria5-fotor-20230624124413.png',
+      '/src/assets/img/galeria2/galeria6-fotor-20230624124427.png',
+      '/src/assets/img/galeria2/galeria7-fotor-20230624124444.png',
+      '/src/assets/img/galeria2/galeria8-fotor-20230624124516.png'
     ])
     let imgSelect = ref()
     let indexGlery = ref()

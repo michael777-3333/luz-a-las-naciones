@@ -3,7 +3,7 @@
         <nav v-show="showNav" class="navbar fixed-top navbar-expand-lg bg-body-tertiary" id="nav">
             <div class="container-fluid">
                 <div class="contenedorImaLogo" style="margin-left: 30px;">
-                    <img src="src/assets/img/logo.png" style="width: 100px;  border-radius: 20px;" alt="logo">
+                    <img src="/src/assets/img/logo.png" style="width: 100px;  border-radius: 20px;" alt="logo">
                   </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

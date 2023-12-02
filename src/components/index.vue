@@ -428,7 +428,7 @@
           </div>
           <button @click="maestros()" class="btn btn-img d-flex justify-content-center">
             <i class="bi bi-arrow-up-right-circle" style="font-size: 30px; color: #fff;"></i>
-            roter
+           
             
           </button>
         </div>
@@ -450,11 +450,13 @@
         <h2 class="titles" style="color: #f8efed;">Nuestra Galeria</h2>
       </div>
     </div>
+
     <div class="row">
       <div class="contenedorImg col-xs-auto col-sm-12 col-md-6 col-lg-6  col-xxl-3 d-flex justify-content-center"
         name="imGaleria" v-for="(item, index) in srcGaleriComplete">
         <img class="galeria" @click="openFullimg(item)" v-bind:src="item" alt="galeria4"
           style="width: 300px; height: 300px; border-radius: 30px;">
+          <div>{{ item }}</div>
       </div>
     </div>
 
@@ -471,7 +473,7 @@
     <div style="height: 30px;"></div>
   </div>
 
-    <!-- <div class="row full-img" v-show="showSelectImg" style="display: flex;" id="filBox">
+    <div class="row full-img" v-show="showSelectImg" style="display: flex;" id="filBox">
        <div style="height: 20px;"></div>
        <div class="col-12 d-flex justify-content-end">
         <button class="btn btn" style="color: #fff; font-size: 30px;">
@@ -492,7 +494,7 @@
               <i class="bi bi-arrow-right-circle-fill" @click="nextImg()"></i>
             </button>
           </div>
-    </div> -->
+    </div>
 
 
   <!-- FOOTER  -->
@@ -622,14 +624,14 @@ export default {
     // SHOW THE INDEX IMG OF GALERY 
 
     let srcGaleriComplete = ref([
-      '/src/assets/img/galeria2/galeria1.png',
-      '/src/assets/img/galeria2/galeria2-fotor-20230624124312.png',
-      '/src/assets/img/galeria2/galeria3-fotor-20230624124331.png',
-      '/src/assets/img/galeria2/galeria4-fotor-20230624124350.png',
-      '/src/assets/img/galeria2/galeria5-fotor-20230624124413.png',
-      '/src/assets/img/galeria2/galeria6-fotor-20230624124427.png',
-      '/src/assets/img/galeria2/galeria7-fotor-20230624124444.png',
-      '/src/assets/img/galeria2/galeria8-fotor-20230624124516.png'
+      'src/assets/img/galeria2/galeria1.png',
+      'src/assets/img/galeria2/galeria2-fotor-20230624124312.png',
+      'src/assets/img/galeria2/galeria3-fotor-20230624124331.png',
+      'src/assets/img/galeria2/galeria4-fotor-20230624124350.png',
+      'src/assets/img/galeria2/galeria5-fotor-20230624124413.png',
+      'src/assets/img/galeria2/galeria6-fotor-20230624124427.png',
+      'src/assets/img/galeria2/galeria7-fotor-20230624124444.png',
+      'src/assets/img/galeria2/galeria8-fotor-20230624124516.png'
     ])
     let imgSelect = ref()
     let indexGlery = ref()

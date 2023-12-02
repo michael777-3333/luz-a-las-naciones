@@ -624,14 +624,14 @@ export default {
     // SHOW THE INDEX IMG OF GALERY 
 
     let srcGaleriComplete = ref([
-      '/public/img/galeria2/galeria1.png',
-      '/public/img/galeria2/galeria2-fotor-20230624124312.png',
-      '/public/img/galeria2/galeria3-fotor-20230624124331.png',
-      '/public/img/galeria2/galeria4-fotor-20230624124350.png',
-      '/public/img/galeria2/galeria5-fotor-20230624124413.png',
-      '/public/img/galeria2/galeria6-fotor-20230624124427.png',
-      '/public/img/galeria2/galeria7-fotor-20230624124444.png',
-      '/public/img/galeria2/galeria8-fotor-20230624124516.png'
+        require('/public/img/galeria2/galeria1.png'),
+      require('/public/img/galeria2/galeria2-fotor-20230624124312.png'),
+      require('/public/img/galeria2/galeria3-fotor-20230624124331.png'),
+      require('/public/img/galeria2/galeria4-fotor-20230624124350.png'),
+      require('/public/img/galeria2/galeria5-fotor-20230624124413.png'),
+      require('/public/img/galeria2/galeria6-fotor-20230624124427.png'),
+      require('/public/img/galeria2/galeria7-fotor-20230624124444.png'),
+      require('/public/img/galeria2/galeria8-fotor-20230624124516.png')
     ])
     let imgSelect = ref()
     let indexGlery = ref()

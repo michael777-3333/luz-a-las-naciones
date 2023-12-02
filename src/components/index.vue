@@ -47,38 +47,38 @@
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner ">
         <div class="carousel-item active ">
-          <img src="/public/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100 " alt="...">
+          <img src="/src/assets/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100 " alt="...">
           <div class="row titleCarrusel" style="color: #900D0D; width: 700px; text-transform: uppercase;">
             <div class="col-12">
               <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12 ">
-              <img class="imgLogo" src="/public/img/logo2.png" alt="">
+              <img class="imgLogo" src="/src/assets/img/logo2.png" alt="">
             </div>
 
           </div>
         </div>
         <div class="carousel-item">
-          <img src="/public/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100" alt="...">
+          <img src="/src/assets/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100" alt="...">
           <div class="row titleCarrusel" style="color: #900D0D; width: 700px; text-transform: uppercase;">
             <div class="col-12">
               <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12">
-              <img class="imgLogo " src="/public/img/logo2.png" alt="">
+              <img class="imgLogo " src="/src/assets/img/logo2.png" alt="">
             </div>
 
           </div>
 
         </div>
         <div class="carousel-item">
-          <img src="/public/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100" alt="...">
+          <img src="/src/assets/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100" alt="...">
           <div class="row titleCarrusel" style="color: #900D0D; width: 700px; text-transform: uppercase;">
             <div class="col-12">
               <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12">
-              <img class="imgLogo" src="/public/img/logo2.png" alt="">
+              <img class="imgLogo" src="/src/assets/img/logo2.png" alt="">
             </div>
 
           </div>
@@ -125,7 +125,7 @@
       <div
         class="aboutUS col-xs-auto col-sm-12 col-md-4 d-flex justify-content-center m-xs-3 m-sm-3 m-md-0 animate__animated animate__backInLeft">
         <div class="card" style="width: 400px; height: 400px; border-radius: 10px;">
-          <img class="card-img" src="/public/img/Photos/escuela.png" alt=""
+          <img class="card-img" src="/src/assets/img/Photos/escuela.png" alt=""
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body" style="color: #fff;">
             <h2 class="card-title">Mision</h2>
@@ -144,7 +144,7 @@
       <div
         class="aboutUS col-xs-auto col-sm-12 col-md-4 d-flex justify-content-center m-sm-3 m-md-0 animate__animated animate__backInDown">
         <div class="card" style="width: 400px; height: 400px; border-radius: 10px;">
-          <img class="card-img" src="/public/img/Photos/img1194.jpg" alt=""
+          <img class="card-img" src="/src/assets/img/Photos/img1194.jpg" alt=""
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body" style="color: #fff;">
             <h2 class="card-title">Vision</h2>
@@ -162,7 +162,7 @@
         class="aboutUS col-xs-auto col-sm-12 col-md-4 d-flex justify-content-center m-sm-3 m-md-0 animate__animated animate__bounceIn"
         style="color: #fff;">
         <div class="card" style="width: 400px; height: 400px; border-radius: 10px;">
-          <img class="card-img" src="/public/img/Photos/img1102.jpg" alt=""
+          <img class="card-img" src="/src/assets/img/Photos/img1102.jpg" alt=""
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body" style="color: #fff;">
             <h2 class="card-title">Historia</h2>
@@ -207,7 +207,7 @@
       <div class="col-xs-auto col-sm-12 col-md-12 col-lg-6 columsProyectos mb-sm-3 mb-md-3 mb-lg-0"
         style="background-color: #900D0D;">
         <div style="width: 100%;">
-          <img class="" src="/public/img/palocortado.jpg" alt="" srcset="" style="width: 100%;">
+          <img class="" src="/src/assets/img/palocortado.jpg" alt="" srcset="" style="width: 100%;">
         </div>
       </div>
     </div>
@@ -215,7 +215,7 @@
     <div class="row" style="padding-left: 0%;padding-right: 0%;">
       <div class="col-xs-auto col-sm-12 col-md-12 col-lg-6 columsProyectos" style="background-color: #900D0D;">
         <div style="width: 100%;">
-          <img class="" src="/public/img/enfoque.jpg" alt="" srcset="" style="width: 100%;">
+          <img class="" src="/src/assets/img/enfoque.jpg" alt="" srcset="" style="width: 100%;">
         </div>
       </div>
 
@@ -257,15 +257,15 @@
           <div class="imgProyects col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xxl-5 ">
 
             <img v-if="count == 0" class="imgProyects animate__animated animate__bounceIn d-flex justify-content-center"
-              src="/public/img/proyects/paloCortado.jpg" alt="" style="width: 100% ;height:400px;">
+              src="/src/assets/img/proyects/paloCortado.jpg" alt="" style="width: 100% ;height:400px;">
             <img v-if="count == 1" class="imgProyects animate__animated animate__bounceIn"
-              src="/public/img/proyects/puenteTierra.jpg" alt="" style="width: 100% ;height: 400px;">
+              src="/src/assets/img/proyects/puenteTierra.jpg" alt="" style="width: 100% ;height: 400px;">
             <img v-if="count == 2" class="imgProyects animate__animated animate__bounceIn"
-              src="/public/img/proyects/macanillo.jpg" alt="" style="width: 100% ;height: 400px;">
+              src="/src/assets/img/proyects/macanillo.jpg" alt="" style="width: 100% ;height: 400px;">
             <img v-if="count == 3" class="imgProyects animate__animated animate__bounceIn"
-              src="/public/img/proyects/provi.png" alt="" style="width: 100% ;height: 400px;">
+              src="/src/assets/img/proyects/provi.png" alt="" style="width: 100% ;height: 400px;">
             <img v-if="count == 4" class="imgProyects animate__animated animate__bounceIn"
-              src="/public/img/proyects/puertaApuerta.jpg" alt="" style="width: 100% ;height: 400px;">
+              src="/src/assets/img/proyects/puertaApuerta.jpg" alt="" style="width: 100% ;height: 400px;">
 
           </div>
           <div class="proyects col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xxl-5 d-flex justify-content-sm-center">
@@ -367,7 +367,7 @@
       <div
         class="maestros col-xs-auto col-sm-12 col-md-6 col-lg-6 col-xxl-3 mb-xs-3 mb-sm-3 mb-md-3 mb-lg-3 mb-xxl-0 d-flex justify-content-center">
         <div class="card1" style="width: 400px; height: 400px; border-radius: 10px;">
-          <img class="card-img" src="/public/img/Photos/tematicas.jpg" alt=""
+          <img class="card-img" src="/src/assets/img/Photos/tematicas.jpg" alt=""
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body2">
             <h2 class="card-title">Tematicas</h2>
@@ -385,7 +385,7 @@
       <div
         class="maestros col-xs-auto col-sm-12 col-md-6 col-lg-6 col-xxl-3 mb-xs-3 mb-sm-3 mb-md-3 mb-lg-3 mb-xxl-0 d-flex justify-content-center">
         <div class="card1" style="width: 400px; height: 400px; border-radius: 10px;">
-          <img class="card-img" src="/public/img/Photos/grupo.jpg" alt=""
+          <img class="card-img" src="/src/assets/img/Photos/grupo.jpg" alt=""
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body2">
             <h2 class="card-title">Unetenos</h2>
@@ -401,7 +401,7 @@
       <div
         class="maestros col-xs-auto col-sm-12 col-md-6 col-lg-6 col-xxl-3 mb-xs-3 mb-sm-3 mb-md-3 mb-lg-3 mb-xxl-0 d-flex justify-content-center">
         <div class="card1" style="width: 400px; height: 400px; border-radius: 10px;">
-          <img class="card-img" src="/public/img/Photos/maestros.jpg" alt=""
+          <img class="card-img" src="/src/assets/img/Photos/maestros.jpg" alt=""
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body2">
             <h2 class="card-title">Testimonios</h2>
@@ -418,7 +418,7 @@
       <div
         class="maestros col-xs-auto col-sm-12 col-md-6 col-lg-6 col-xxl-3 mb-xs-3 mb-sm-3 mb-md-3 mb-lg-3 mb-xxl-0 d-flex justify-content-center">
         <div class="card1" style="width: 400px; height: 400px; border-radius: 10px;">
-          <img class="card-img" src="/public/img/Photos/testimonios.jpg" alt=""
+          <img class="card-img" :src="yy" alt=""
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body2">
             <h2 class="card-title">Maestros</h2>
@@ -454,9 +454,8 @@
     <div class="row">
       <div class="contenedorImg col-xs-auto col-sm-12 col-md-6 col-lg-6  col-xxl-3 d-flex justify-content-center"
         name="imGaleria" v-for="(item, index) in srcGaleriComplete">
-        <img class="galeria" @click="openFullimg(item)" :src="item" alt="galeria4"
+        <img class="galeria" @click="openFullimg(item)" :src="'/src/assets/img/' + item + '.png'" alt="galeria4"
           style="width: 300px; height: 300px; border-radius: 30px;">
-          
       </div>
     </div>
 
@@ -465,7 +464,7 @@
     
     <div class="row ">
       <div class="d-flex justify-content-center">
-        <a href="/public/img/galeria.html">
+        <a href="/src/assets/img/galeria.html">
           <button class="btn btn" type="button" style="background-color:#CF1B1B; color:#fff;">Ir a galeria</button>
         </a>
       </div>
@@ -505,7 +504,7 @@
     <div class="row d-flex justify-content-xs-center justify-content-sm-center justify-content-md-center">
       <div class="col-xs-auto col-sm-6 col-md-6 col-lg-3 m-sm-3 m-md-3 m-lg-0 d-flex align-items-center">
         <div class="imgFooter d-flex justify-content-center" style="margin-left: 30px;"> <img
-            src="/public/img/logo2.png" alt="" style="width: 200px; height: 100px; border-radius: 10px;"></div>
+            src="/src/assets/img/logo2.png" alt="" style="width: 200px; height: 100px; border-radius: 10px;"></div>
       </div>
       <!-- <div class="col-xs-auto col-sm-6 col-md-6 col-lg-3 d-flex justify-content-center  m-sm-3 m-md-3 m-lg-0 ">
         
@@ -531,17 +530,17 @@
        
           <div class=" d-flex justify-content-center">
             <a href="">
-              <img src="/public/img/facebook.png" style="width: 50px; height: 50px" alt="">
+              <img src="/src/assets/img/facebook.png" style="width: 50px; height: 50px" alt="">
             </a>
           </div>
           <div class=" d-flex justify-content-center">
             <a href="">
-              <img src="/public/img/gmail.png" style="width: 50px; height: 50px" alt="">
+              <img src="/src/assets/img/gmail.png" style="width: 50px; height: 50px" alt="">
             </a>
           </div>
           <div class=" d-flex justify-content-center">
             <a href="">
-              <img src="/public/img/instagram.png" style="width: 50px; height: 50px " alt="">
+              <img src="/src/assets/img/instagram.png" style="width: 50px; height: 50px " alt="">
             </a>
           </div>
         
@@ -570,7 +569,7 @@ export default {
     const route = useRoute()
     // new Swal('Bievenido a luz a las Naciones');
 
-
+    let yy =ref("/src/assets/img/Photos/testimonios.jpg")
     // MOSTRAR LAS SWEETALERT EN ABOUT US 
     function mision(value) {
 
@@ -624,14 +623,14 @@ export default {
     // SHOW THE INDEX IMG OF GALERY 
 
     let srcGaleriComplete = ref([
-        require('/public/img/galeria2/galeria1.png'),
-      require('/public/img/galeria2/galeria2-fotor-20230624124312.png'),
-      require('/public/img/galeria2/galeria3-fotor-20230624124331.png'),
-      require('/public/img/galeria2/galeria4-fotor-20230624124350.png'),
-      require('/public/img/galeria2/galeria5-fotor-20230624124413.png'),
-      require('/public/img/galeria2/galeria6-fotor-20230624124427.png'),
-      require('/public/img/galeria2/galeria7-fotor-20230624124444.png'),
-      require('/public/img/galeria2/galeria8-fotor-20230624124516.png')
+        "galeria2/galeria1",
+      'galeria2/galeria2-fotor-20230624124312',
+      'galeria2/galeria3-fotor-20230624124331',
+      'galeria2/galeria4-fotor-20230624124350',
+      'galeria2/galeria5-fotor-20230624124413',
+      'galeria2/galeria6-fotor-20230624124427',
+      'galeria2/galeria7-fotor-20230624124444',
+      'galeria2/galeria8-fotor-20230624124516'
     ])
     let imgSelect = ref()
     let indexGlery = ref()
@@ -708,7 +707,7 @@ export default {
     return {
       mision,
       showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,
-      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros
+      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros,yy
     }
   }
 

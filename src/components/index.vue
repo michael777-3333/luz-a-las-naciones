@@ -257,15 +257,15 @@
           <div class="imgProyects col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xxl-5 ">
 
             <img v-if="count == 0" class="imgProyects animate__animated animate__bounceIn d-flex justify-content-center"
-              src="/src/assets/img/proyects/paloCortado.jpg" alt="" style="width: 100% ;height:400px;">
+              src="src/assets/img/proyects/paloCortado.jpg" alt="" style="width: 100% ;height:400px;">
             <img v-if="count == 1" class="imgProyects animate__animated animate__bounceIn"
-              src="/src/assets/img/proyects/puenteTierra.jpg" alt="" style="width: 100% ;height: 400px;">
+              src="src/assets/img/proyects/puenteTierra.jpg" alt="" style="width: 100% ;height: 400px;">
             <img v-if="count == 2" class="imgProyects animate__animated animate__bounceIn"
-              src="/src/assets/img/proyects/macanillo.jpg" alt="" style="width: 100% ;height: 400px;">
+              src="src/assets/img/proyects/macanillo.jpg" alt="" style="width: 100% ;height: 400px;">
             <img v-if="count == 3" class="imgProyects animate__animated animate__bounceIn"
-              src="/src/assets/img/proyects/provi.png" alt="" style="width: 100% ;height: 400px;">
+              src="src/assets/img/proyects/provi.png" alt="" style="width: 100% ;height: 400px;">
             <img v-if="count == 4" class="imgProyects animate__animated animate__bounceIn"
-              src="/src/assets/img/proyects/puertaApuerta.jpg" alt="" style="width: 100% ;height: 400px;">
+              src="src/assets/img/proyects/puertaApuerta.jpg" alt="" style="width: 100% ;height: 400px;">
 
           </div>
           <div class="proyects col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xxl-5 d-flex justify-content-sm-center">

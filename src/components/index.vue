@@ -454,8 +454,9 @@
     <div class="row">
       <div class="contenedorImg col-xs-auto col-sm-12 col-md-6 col-lg-6  col-xxl-3 d-flex justify-content-center"
         name="imGaleria" v-for="(item, index) in srcGaleriComplete">
-        <img class="galeria" @click="openFullimg(item)" :src="'/src/assets/img/' + item + '.png'" alt="galeria4"
+        <img class="galeria" @click="openFullimg(item)" :src=item alt="galeria4"
           style="width: 300px; height: 300px; border-radius: 30px;">
+          <div><img v-bind:src="glob" alt=""></div>
       </div>
     </div>
 
@@ -620,18 +621,10 @@ export default {
       indexUbication.value = currentUbication.value
     })
 
+    
     // SHOW THE INDEX IMG OF GALERY 
 
-    let srcGaleriComplete = ref([
-        "galeria2/galeria1",
-      'galeria2/galeria2-fotor-20230624124312',
-      'galeria2/galeria3-fotor-20230624124331',
-      'galeria2/galeria4-fotor-20230624124350',
-      'galeria2/galeria5-fotor-20230624124413',
-      'galeria2/galeria6-fotor-20230624124427',
-      'galeria2/galeria7-fotor-20230624124444',
-      'galeria2/galeria8-fotor-20230624124516'
-    ])
+
     let imgSelect = ref()
     let indexGlery = ref()
     let showSelectImg = ref(false)
@@ -640,7 +633,21 @@ export default {
     let previusIndex = ref()
     let count = ref(0)
     let pasadorProyectos = ref(false)
-    function openFullimg(refer) {
+
+    let srcGaleriComplete = ref([
+    "/src/assets/img/galeria2/galeria1.png" ,
+  '/src/assets/img/galeria2/galeria2-fotor-20230624124312.png',
+  '/src/assets/img/galeria2/galeria3-fotor-20230624124331.png' ,
+  '/src/assets/img/galeria2/galeria4-fotor-20230624124350.png' ,
+  '/src/assets/img/galeria2/galeria5-fotor-20230624124413.png' ,
+  '/src/assets/img/galeria2/galeria6-fotor-20230624124427.png' ,
+  '/src/assets/img/galeria2/galeria7-fotor-20230624124444.png' ,
+  '/src/assets/img/galeria2/galeria8-fotor-20230624124516.png' 
+])
+const glob =import.meta.glob('/src/assets/img/galeria2/*png', { eager: true })
+console.log(glob);
+
+function openFullimg(refer) {
       imgSelect.value = refer
       showSelectImg.value = true
       showNav.value = false
@@ -707,7 +714,7 @@ export default {
     return {
       mision,
       showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,
-      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros,yy
+      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros,yy, glob
     }
   }
 

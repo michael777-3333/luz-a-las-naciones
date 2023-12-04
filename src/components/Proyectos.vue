@@ -141,18 +141,25 @@ import { ref, computed, reactive } from "vue"
 import Swal from 'sweetalert2';
 import { useWindowSize } from 'vue-window-size';
 import { useRouter, useRoute } from 'vue-router'
+import { filename } from 'pathe/utils'
 // import $ from jquery
 export default {
   setup() {
     const router = useRouter()
     let letNumber2=ref(true)
     let count = ref(0)
+    const glob2 = import.meta.glob('/src/assets/img/maestros/*jpg', { eager: true })
+// console.log(glob);
+const images2 = Object.fromEntries(
+  Object.entries(glob2).map(([key, value]) => [filename(key), value.default])
+)
+console.log(images2);
     let fundadores = ref([
       {
         id:1,
         name: "Juan Bennet",
         tipo: "Pastor Fundador",
-        img: "/src/assets/img/maestros/juan.jpg",
+        img: images2.juan,
       },
       {
         id:2,
@@ -167,7 +174,7 @@ export default {
         id:3,
         name: "Magda Suarez",
         tipo: "Coordinadora",
-        img: "/src/assets/img/maestros/magda.jpg",
+        img: images2.magda,
       },
     ]);
 
@@ -176,20 +183,20 @@ export default {
         id:4,
         name: "Leonardo Fiallo",
         tipo: "Maestra",
-        img: "/src/assets/img/maestros/leo.jpg",
+        img: images2.leo,
         visible:true
       },
       {
         id:5,
         name: "Maria Porras",
         tipo: "Maestra",
-        img: "/src/assets/img/maestros/maria.jpg",
+        img: images2.maria,
       },
       {
         id:6,
         name: "Miguel Duran",
         tipo: "Pastor",
-        img: "/src/assets/img/maestros/miguel.jpg",
+        img: images2.miguel,
       },
 
     ]);
@@ -199,33 +206,32 @@ export default {
         id:7,
         name: "Isaac Inca",
         tipo: "Ayudante",
-        img: "/src/assets/img/maestros/isaac2.jpg",
+        img: images2.isaac,
       },
       {
         id:8,
         name: "Michael Sarmiento",
         tipo: "Ayudante",
-        img: "/src/assets/img/maestros/michael.jpg",
+        img: images2.michael,
       },
     ]);
 
     function countProyects() {
       count.value += 1
       if(count.value==3){
-      
         maestros.value=[
-                {
-                  id:9,
-        name: "Laura Galviz",
-        tipo: "Maestra",
-        img: "/src/assets/img/maestros/laura.jpg",
-      },
-      {
-        id:10,
-        name: "Doris",
-        tipo: "Maestra",
-        img: "/src/assets/img/maestros/doris.jpg",
-      },
+        {
+          id:9,
+          name: "Laura Galviz",
+          tipo: "Maestra",
+          img: images2.laura,
+        },
+        {
+          id:10,
+          name: "Doris",
+          tipo: "Maestra",
+          img: images2.doris,
+        },
         ]
       }
       if(count.value==4){
@@ -236,20 +242,20 @@ export default {
         id:4,
         name: "Leonardo Fiallo",
         tipo: "Maestra",
-        img: "/src/assets/img/maestros/leo.jpg",
+        img: images2.leo,
         visible:true
       },
       {
         id:5,
         name: "Maria Porras",
         tipo: "Maestra",
-        img: "/src/assets/img/maestros/maria.jpg",
+        img: images2.maria,
       },
       {
         id:6,
         name: "Miguel Duran",
         tipo: "Pastor",
-        img: "/src/assets/img/maestros/miguel.jpg",
+        img: images2.miguel,
       },
         ]
       }
@@ -272,20 +278,20 @@ export default {
         id:4,
         name: "Leonardo Fiallo",
         tipo: "Maestra",
-        img: "/src/assets/img/maestros/leo.jpg",
+        img: images2.leo,
         visible:true
       },
       {
         id:5,
         name: "Maria Porras",
         tipo: "Maestra",
-        img: "/src/assets/img/maestros/maria.jpg",
+        img: images2.maria,
       },
       {
         id:6,
         name: "Miguel Duran",
         tipo: "Pastor",
-        img: "/src/assets/img/maestros/miguel.jpg",
+        img: images2.miguel,
       },
         ]
       }
@@ -296,18 +302,19 @@ export default {
         id:9,
         name: "Laura Galviz",
         tipo: "Maestra",
-        img: "/src/assets/img/maestros/laura.jpg",
+        img: images2.laura,
       },
       {
         id:10,
         name: "Doris",
         tipo: "Maestra",
-        img: "/src/assets/img/maestros/doris.jpg",
+        img: images2.doris,
       },
       ]
       }
     }
-    function getInformation(params) {
+
+function getInformation(params) {
       switch (params) {
         case 1:
         Swal.fire(
@@ -380,16 +387,15 @@ export default {
         )
           break;
 }
-    }
-    function volver(params) {
-      router.push({ path: '/', replace: true })
-    }
+}
+function volver(params) {
+  router.push({ path: '/', replace: true })}
     
 
     const { width, height } = useWindowSize();
     return {
       count, fundadores, coordinador, maestros, ayudantes, countProyects, countBack, windowWidth: width,
-      letNumber2,getInformation,volver
+      letNumber2,getInformation,volver,images2
     }
 
 

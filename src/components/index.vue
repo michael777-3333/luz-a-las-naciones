@@ -460,9 +460,6 @@
       </div>
     </div>
 
-
-
-    
     <div class="row ">
       <div class="d-flex justify-content-center">
         <a href="/src/assets/img/galeria.html">
@@ -481,7 +478,7 @@
         </button>
        </div>
       <div class="col-12 d-flex justify-content-center" >
-        <img class="imgSelecGalery animate__animated animate__bounceIn" v-bind:src="imgSelect" id="fullimg" alt="">
+        <img class="imgSelecGalery animate__animated animate__bounceIn" v-bind:src="images[imagesNext]" id="fullimg" alt="">
       </div>
           
           <div class="col-6 d-flex justify-content-end">
@@ -625,16 +622,18 @@ export default {
     // SHOW THE INDEX IMG OF GALERY 
 
 
-    let imgSelect = ref()
-    let indexGlery = ref()
-    let showSelectImg = ref(false)
-    let nextImgSrc = ref()
-    let previousImageSrc = ref()
-    let previusIndex = ref()
-    let count = ref(0)
-    let pasadorProyectos = ref(false)
-
-    let srcGaleriComplete = ref([
+let imgSelect = ref()
+let indexGlery = ref()
+let showSelectImg = ref(false)
+let nextImgSrc = ref()
+let previousImageSrc = ref()
+let previusIndex = ref()
+let count = ref(0)
+let pasadorProyectos = ref(false)
+let imgSelectRecor=ref()
+let imagesNext=ref()
+let letNewLap=ref(false)
+let srcGaleriComplete = ref([
   "galeria1",
   'galeria2-fotor-20230624124312',
   'galeria3-fotor-20230624124331',
@@ -645,79 +644,92 @@ export default {
   'galeria8-fotor-20230624124516' 
 ])
 
-const glob =import.meta.glob('/src/assets/img/galeria2/*png', { eager: true })
-console.log(glob);
+const glob = import.meta.glob('/src/assets/img/galeria2/*png', { eager: true })
+// console.log(glob);
 const images = Object.fromEntries(
   Object.entries(glob).map(([key, value]) => [filename(key), value.default])
 )
-console.log(images);
+
+// console.log(images);
 function openFullimg(refer) {
-      imgSelect.value = refer
+      imgSelect.value = images[refer]
       showSelectImg.value = true
       showNav.value = false
-    }
-    function closeImg() {
+      let sizeImgSelect=imgSelect.value.length
+      imgSelectRecor.value =imgSelect.value.slice(25,sizeImgSelect-4)
+      console.log(imgSelectRecor.value);
+      imagesNext.value=imgSelectRecor.value
+}
+function closeImg() {
       showSelectImg.value = false
       showNav.value = true
-    }
-    function nextImg() {
+}
+function nextImg() {
       for (let i = 0; i < srcGaleriComplete.value.length; i++) {
-        if (imgSelect.value == srcGaleriComplete.value[srcGaleriComplete.value.length]) {
-          nextImgSrc.value = srcGaleriComplete.value[0]
-        } else if (imgSelect.value == srcGaleriComplete.value[i]) {
-          indexGlery.value = i + 1
-          nextImgSrc.value = srcGaleriComplete.value[indexGlery.value]
+        if (imgSelectRecor.value == srcGaleriComplete.value[i]) {
+          indexGlery.value = i+1
+          imagesNext.value = srcGaleriComplete.value[indexGlery.value]
         }
+        else if (imgSelectRecor.value == srcGaleriComplete.value[srcGaleriComplete.value.length-1]) {
+          imagesNext.value=srcGaleriComplete.value[0]
+          imgSelectRecor.value=srcGaleriComplete.value[0]
+          letNewLap.value=true
+        } 
       }
-      if (nextImgSrc.value == undefined) {
-        imgSelect.value = 'src/assets/img/galeria2/galeria1.png'
-      } else {
-        imgSelect.value = nextImgSrc.value
+      if (letNewLap.value==false) {
+        imgSelectRecor.value=srcGaleriComplete.value[indexGlery.value]
+
+      }else{
+        imgSelectRecor.value=srcGaleriComplete.value[0]
+        letNewLap.value=false
       }
     }
-    function prevuisImg() {
+function prevuisImg() {
       for (let i = srcGaleriComplete.value.length - 1; i >= 0; i--) {
-        if (imgSelect.value == srcGaleriComplete.value[i]) {
+        if (imgSelectRecor.value == srcGaleriComplete.value[i]) {
           if (i == 0) {
-            previusIndex.value = srcGaleriComplete.value.length
-            previousImageSrc.value = srcGaleriComplete.value[previusIndex.value]
+            previusIndex.value = srcGaleriComplete.value.length-1
+            imagesNext.value = srcGaleriComplete.value[previusIndex.value]
+            letNewLap.value=false
           } else {
             previusIndex.value = i - 1
-            previousImageSrc.value = srcGaleriComplete.value[previusIndex.value]
+            imagesNext.value = srcGaleriComplete.value[previusIndex.value]
           }
         }
       }
-      if (previousImageSrc.value == undefined) {
-        imgSelect.value = 'src/assets/img/galeria2/galeria8-fotor-20230624124516.png'
-      } else {
-        imgSelect.value = previousImageSrc.value
+      if (letNewLap.value==false) {
+        imgSelectRecor.value=srcGaleriComplete.value[previusIndex.value]
+
+      }else{
+        imgSelectRecor.value=srcGaleriComplete.value[0]
+        letNewLap.value=true
       }
-    }
+}
 
     // PASAR PROYECTOS 
-    function countProyects() {
+function countProyects() {
       count.value += 1
       if (count.value == 5) {
         count.value = 1
       }
     }
-    function countBack() {
+function countBack() {
       count.value -= 1
       if (count.value == -1) {
         count.value = 4
       }
     }
 
-    function maestros(params) {
+function maestros(params) {
       router.push({ path: '/proyectos', replace: true })
-    }
+}
 
     // QUITAR ALGUNAS FOTOS EN GALERIA DEPENDIENDO SI EL TAMANO DE LA PANTALLA ES DE CELULAR
-    const { width, height } = useWindowSize();
+const { width, height } = useWindowSize();
 
     return {
       mision,
-      showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,
+      showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,imagesNext,
       openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros,yy, glob,images
     }
   }

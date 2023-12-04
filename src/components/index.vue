@@ -418,7 +418,7 @@
       <div
         class="maestros col-xs-auto col-sm-12 col-md-6 col-lg-6 col-xxl-3 mb-xs-3 mb-sm-3 mb-md-3 mb-lg-3 mb-xxl-0 d-flex justify-content-center">
         <div class="card1" style="width: 400px; height: 400px; border-radius: 10px;">
-          <img class="card-img" :src="yy" alt=""
+          <img class="card-img" src="/src/assets/img/Photos/testimonios.jpg" alt=""
             style="width: 100%; height: 100%; border-radius: 10px;">
           <div class="card-body2">
             <h2 class="card-title">Maestros</h2>
@@ -567,7 +567,7 @@ export default {
     const route = useRoute()
     // new Swal('Bievenido a luz a las Naciones');
 
-    let yy =ref("/src/assets/img/Photos/testimonios.jpg")
+  
     // MOSTRAR LAS SWEETALERT EN ABOUT US 
     function mision(value) {
 
@@ -729,7 +729,7 @@ const { width, height } = useWindowSize();
     return {
       mision,
       showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,
-      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros,yy, glob,images
+      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros, glob,images
     }
   }
 

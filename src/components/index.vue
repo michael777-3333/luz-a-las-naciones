@@ -454,9 +454,9 @@
     <div class="row">
       <div class="contenedorImg col-xs-auto col-sm-12 col-md-6 col-lg-6  col-xxl-3 d-flex justify-content-center"
         name="imGaleria" v-for="(item, index) in srcGaleriComplete">
-        <img class="galeria" @click="openFullimg(item)" :src=images[item] alt="galeria4"
+        <img class="galeria" @click="openFullimg(item)" :src=item alt="galeria4"
           style="width: 300px; height: 300px; border-radius: 30px;">
-          <div><img v-bind:src="glob" alt=""></div>
+          <!-- <div>{{ imagesNext}} {{ item  }}</div> -->
       </div>
     </div>
 
@@ -633,22 +633,23 @@ let pasadorProyectos = ref(false)
 let imgSelectRecor=ref()
 let imagesNext=ref()
 let letNewLap=ref(false)
-let srcGaleriComplete = ref([
-  "galeria1",
-  'galeria2-fotor-20230624124312',
-  'galeria3-fotor-20230624124331',
-  'galeria4-fotor-20230624124350',
-  'galeria5-fotor-20230624124413',
-  'galeria6-fotor-20230624124427',
-  'galeria7-fotor-20230624124444',
-  'galeria8-fotor-20230624124516' 
-])
-
 const glob = import.meta.glob('/src/assets/img/galeria2/*png', { eager: true })
 // console.log(glob);
 const images = Object.fromEntries(
   Object.entries(glob).map(([key, value]) => [filename(key), value.default])
 )
+let srcGaleriComplete = ref([
+  images.galeria1,
+  images.galeria2_fotor_20230624124312,
+  images.galeria3_fotor_20230624124331,
+  images.galeria4_fotor_20230624124350,
+  images.galeria5_fotor_20230624124413,
+  images.galeria6_fotor_20230624124427,
+  images.galeria7_fotor_20230624124444,
+  images.galeria8_fotor_20230624124516 
+])
+
+
 console.log(images);
 // console.log(images);
 function openFullimg(refer) {

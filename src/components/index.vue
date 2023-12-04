@@ -630,6 +630,7 @@ let previousImageSrc = ref()
 let previusIndex = ref()
 let count = ref(0)
 let pasadorProyectos = ref(false)
+let letNewLap=ref(false)
 const glob = import.meta.glob('/src/assets/img/galeria2/*png', { eager: true })
 // console.log(glob);
 const images = Object.fromEntries(
@@ -662,43 +663,44 @@ function closeImg() {
       showSelectImg.value = false
       showNav.value = true
 }
+
 function nextImg() {
+  let imgSelectComparative= imgSelect.value
       for (let i = 0; i < srcGaleriComplete.value.length; i++) {
-        if ( imgSelect.value == srcGaleriComplete.value[i]) {
+        if (imgSelectComparative == srcGaleriComplete.value[srcGaleriComplete.value.length-1]) {
+          imgSelect.value=srcGaleriComplete.value[0]
+          letNewLap.value=true
+        } else if ( imgSelectComparative == srcGaleriComplete.value[i]) {
           indexGlery.value = i+1
           imgSelect.value = srcGaleriComplete.value[indexGlery.value]
         }
-        else if (imgSelect.value == srcGaleriComplete.value[srcGaleriComplete.value.length-1]) {
-          imgSelect.value=srcGaleriComplete.value[0]
-
-        } 
       }
       if (letNewLap.value==false) {
-        imgSelectRecor.value=srcGaleriComplete.value[indexGlery.value]
-
+        imgSelectComparative=srcGaleriComplete.value[indexGlery.value]
       }else{
-        imgSelectRecor.value=srcGaleriComplete.value[0]
+        imgSelectComparative=srcGaleriComplete.value[0]
         letNewLap.value=false
       }
     }
 function prevuisImg() {
+  let imgSelectRecor= imgSelect.value
       for (let i = srcGaleriComplete.value.length - 1; i >= 0; i--) {
-        if (imgSelectRecor.value == srcGaleriComplete.value[i]) {
+        if (imgSelectRecor == srcGaleriComplete.value[i]) {
           if (i == 0) {
             previusIndex.value = srcGaleriComplete.value.length-1
-            imagesNext.value = srcGaleriComplete.value[previusIndex.value]
+            imgSelect.value = srcGaleriComplete.value[previusIndex.value]
             letNewLap.value=false
           } else {
             previusIndex.value = i - 1
-            imagesNext.value = srcGaleriComplete.value[previusIndex.value]
+            imgSelect.value = srcGaleriComplete.value[previusIndex.value]
           }
         }
       }
       if (letNewLap.value==false) {
-        imgSelectRecor.value=srcGaleriComplete.value[previusIndex.value]
+        imgSelectRecor=srcGaleriComplete.value[previusIndex.value]
 
       }else{
-        imgSelectRecor.value=srcGaleriComplete.value[0]
+        imgSelectRecor=srcGaleriComplete.value[0]
         letNewLap.value=true
       }
 }

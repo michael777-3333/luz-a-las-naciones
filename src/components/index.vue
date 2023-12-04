@@ -478,7 +478,7 @@
         </button>
        </div>
       <div class="col-12 d-flex justify-content-center" >
-        <img class="imgSelecGalery animate__animated animate__bounceIn" v-bind:src="images[imagesNext]" id="fullimg" alt="">
+        <img class="imgSelecGalery animate__animated animate__bounceIn" :src=images[imagesNext] id="fullimg" alt="">
       </div>
           
           <div class="col-6 d-flex justify-content-end">
@@ -649,7 +649,7 @@ const glob = import.meta.glob('/src/assets/img/galeria2/*png', { eager: true })
 const images = Object.fromEntries(
   Object.entries(glob).map(([key, value]) => [filename(key), value.default])
 )
-
+console.log(images);
 // console.log(images);
 function openFullimg(refer) {
       imgSelect.value = images[refer]

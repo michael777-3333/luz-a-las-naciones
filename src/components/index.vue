@@ -478,7 +478,7 @@
         </button>
        </div>
       <div class="col-12 d-flex justify-content-center" >
-        <img class="imgSelecGalery animate__animated animate__bounceIn" :src=images[imagesNext] id="fullimg" alt="">
+        <img class="imgSelecGalery animate__animated animate__bounceIn" :src=imgSelect id="fullimg" alt="">
       </div>
           
           <div class="col-6 d-flex justify-content-end">
@@ -630,9 +630,6 @@ let previousImageSrc = ref()
 let previusIndex = ref()
 let count = ref(0)
 let pasadorProyectos = ref(false)
-let imgSelectRecor=ref()
-let imagesNext=ref()
-let letNewLap=ref(false)
 const glob = import.meta.glob('/src/assets/img/galeria2/*png', { eager: true })
 // console.log(glob);
 const images = Object.fromEntries(
@@ -650,16 +647,16 @@ let srcGaleriComplete = ref([
 ])
 
 
-console.log(images);
+// console.log(images);
 // console.log(images);
 function openFullimg(refer) {
-      imgSelect.value = images[refer]
-      showSelectImg.value = true
-      showNav.value = false
-      let sizeImgSelect=imgSelect.value.length
-      imgSelectRecor.value =imgSelect.value.slice(25,sizeImgSelect-4)
-      console.log(imgSelectRecor.value);
-      imagesNext.value=imgSelectRecor.value
+  imgSelect.value=refer
+  let sizeImage=imgSelect.value.length
+  console.log(sizeImage);
+  let referRecor=refer.slice(25,sizeImage-4)
+  console.log(referRecor);
+  showSelectImg.value = true
+  showNav.value = false
 }
 function closeImg() {
       showSelectImg.value = false
@@ -667,14 +664,13 @@ function closeImg() {
 }
 function nextImg() {
       for (let i = 0; i < srcGaleriComplete.value.length; i++) {
-        if (imgSelectRecor.value == srcGaleriComplete.value[i]) {
+        if ( imgSelect.value == srcGaleriComplete.value[i]) {
           indexGlery.value = i+1
-          imagesNext.value = srcGaleriComplete.value[indexGlery.value]
+          imgSelect.value = srcGaleriComplete.value[indexGlery.value]
         }
-        else if (imgSelectRecor.value == srcGaleriComplete.value[srcGaleriComplete.value.length-1]) {
-          imagesNext.value=srcGaleriComplete.value[0]
-          imgSelectRecor.value=srcGaleriComplete.value[0]
-          letNewLap.value=true
+        else if (imgSelect.value == srcGaleriComplete.value[srcGaleriComplete.value.length-1]) {
+          imgSelect.value=srcGaleriComplete.value[0]
+
         } 
       }
       if (letNewLap.value==false) {
@@ -721,7 +717,7 @@ function countBack() {
       }
     }
 
-function maestros(params) {
+function maestros() {
       router.push({ path: '/proyectos', replace: true })
 }
 
@@ -730,7 +726,7 @@ const { width, height } = useWindowSize();
 
     return {
       mision,
-      showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,imagesNext,
+      showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,
       openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros,yy, glob,images
     }
   }

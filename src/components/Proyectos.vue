@@ -1,12 +1,12 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid" style="background-image: url('/src/assets/img/fondos/fomdo.png')">
     <div class="row">
       <div style="height: 70px"></div>
       <div class="col titles d-flex justify-content-center" style="font-size: 40px">
         <div>Nuestro Equipo</div>
       </div>
     </div>
-  </div>
+  
   <div style="display: none;" >{{ count }}</div>
   <div style="display: none;">{{ windowWidth }}</div>
   <div class="container-fluid">
@@ -134,6 +134,7 @@
     </div>
 
   </div>
+</div>
 </template>
 
 <script >

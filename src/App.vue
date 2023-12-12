@@ -1,4 +1,4 @@
-<template>
+<template >
       <div class="container-fluid" >
         <nav v-show="showNav" class="navbar fixed-top navbar-expand-lg bg-body-tertiary" id="nav">
             <div class="container-fluid">
@@ -20,6 +20,7 @@
                               <li><a class="dropdown-item" href="#"><router-link to="/">Principal</router-link></a></li>
                             <li><a class="dropdown-item" href="#"><router-link to="/historia">Historia</router-link></a></li>
                             <li><a class="dropdown-item" href="#"><router-link to="/proyectos">Equipo</router-link></a></li>
+                            <li><a class="dropdown-item" href="#"><router-link to="/unetenos">Unetenos</router-link></a></li>
                             <!-- <li><a class="dropdown-item" href="#"></a>Unetenos</li> -->
                             </ul>
                         </li>

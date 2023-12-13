@@ -11,7 +11,8 @@
               <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12 ">
-              <img class="imgLogo" src="/src/assets/img/logo2.png" alt="">
+              
+              <img v-show="showLogo" class="imgLogo" src="/src/assets/img/logo2.png" alt="">
             </div>
 
           </div>
@@ -23,7 +24,7 @@
               <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12">
-              <img class="imgLogo " src="/src/assets/img/logo2.png" alt="">
+              <img v-show="showLogo" class="imgLogo " src="/src/assets/img/logo2.png" alt="">
             </div>
 
           </div>
@@ -36,7 +37,7 @@
               <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12">
-              <img class="imgLogo" src="/src/assets/img/logo2.png" alt="">
+              <img v-show="showLogo" class="imgLogo" src="/src/assets/img/logo2.png" alt="">
             </div>
 
           </div>
@@ -148,7 +149,7 @@
 
     <div class="row">
       <div class="col-xs-auto col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center"
-      :style="{ 'background-image': 'url(' + imagesFondos.fondonina3 + ')' }">
+      :style="{ 'background-image': 'url(' + imagesFondos.fondonina5 + ')' }">
         <div>
           <h1 class="titles" style="padding-left: 30px; color: #f8efed;">
             Propuestas
@@ -179,7 +180,7 @@
       </div>
 
       <div class="col-xs-auto col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center"
-      :style="{ 'background-image': 'url(' + imagesFondos.fondonino2 + ')' }">
+      :style="{ 'background-image': 'url(' + imagesFondos.fondonino3 + ')' }">
         <div>
           <h1 class="titles" style="padding-left: 30px; color: #f8efed;">
             Recursos
@@ -584,7 +585,7 @@ window.addEventListener('scroll', function () {
     
     // SHOW THE INDEX IMG OF GALERY 
 
-
+let showLogo= ref(true)
 let imgSelect = ref()
 let indexGlery = ref()
 let showSelectImg = ref(false)
@@ -696,6 +697,7 @@ function showGalery() {
   showDiv.value=true
 }
 
+
 function sweetProyects(params) {
   if (params==='propuestas') {
     Swal.fire(
@@ -716,7 +718,7 @@ const { width, height } = useWindowSize();
 
     return {
       mision,
-      showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,showGalery,unetenos,fondos,
+      showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,showGalery,unetenos,fondos,showLogo,
       openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros, glob,images,showDiv,sweetProyects,imagesFondos
     }
   }

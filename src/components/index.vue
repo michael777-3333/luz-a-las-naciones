@@ -58,7 +58,7 @@
 
 
   <!-- mission, vision, history -->
-  <div class="container-fluid" style="background-image: url('/src/assets/img/fondos/fomdo.png');">
+  <div class="container-fluid" :style="{ 'background-image': 'url(' + imagesFondos.fomdo + ')' }">
     <div style="height: 50px;"></div>
     <div class="row">
       <div class="col-12">
@@ -148,7 +148,7 @@
 
     <div class="row">
       <div class="col-xs-auto col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center"
-      style="background-image: url('/src/assets/img/fondos/fondonina3.png')">
+      :style="{ 'background-image': 'url(' + imagesFondos.fondonina3 + ')' }">
         <div>
           <h1 class="titles" style="padding-left: 30px; color: #f8efed;">
             Propuestas
@@ -179,7 +179,7 @@
       </div>
 
       <div class="col-xs-auto col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center"
-      style="background-image: url('/src/assets/img/fondos/fondonino2.png');">
+      :style="{ 'background-image': 'url(' + imagesFondos.fondonino2 + ')' }">
         <div>
           <h1 class="titles" style="padding-left: 30px; color: #f8efed;">
             Recursos
@@ -197,7 +197,7 @@
 
   <!-- PROYECTOS2  -->
 
-  <div class="container-fluid" style="background-image: url('/src/assets/img/fondos/fomdo.png');">
+  <div class="container-fluid" :style="{ 'background-image': 'url(' + imagesFondos.fomdo + ')' }">
     <div class="row">
 
       <div class="col">
@@ -600,6 +600,13 @@ const glob = import.meta.glob('/src/assets/img/galeria2/*png', { eager: true })
 const images = Object.fromEntries(
   Object.entries(glob).map(([key, value]) => [filename(key), value.default])
 )
+
+const fondos = import.meta.glob('/src/assets/img/fondos/*png', { eager: true })
+// console.log(glob);
+const imagesFondos = Object.fromEntries(
+  Object.entries(fondos).map(([key, value]) => [filename(key), value.default])
+)
+console.log(imagesFondos);
 let srcGaleriComplete = ref([
   images.galeria1,
   images.galeria2_fotor_20230624124312,
@@ -709,7 +716,7 @@ const { width, height } = useWindowSize();
     return {
       mision,
       showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,showGalery,unetenos,
-      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros, glob,images,showDiv,sweetProyects
+      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros, glob,images,showDiv,sweetProyects,imagesFondos
     }
   }
 

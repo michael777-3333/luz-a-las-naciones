@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid" style="background-image: url('/src/assets/img/fondos/fomdo.png')">
+  <div class="container-fluid" :style="{ 'background-image': 'url(' + imagesFondos.fomdo + ')' }">
     <div class="row">
       <div style="height: 70px"></div>
       <div class="col titles d-flex justify-content-center" style="font-size: 40px">
@@ -154,7 +154,11 @@ export default {
 const images2 = Object.fromEntries(
   Object.entries(glob2).map(([key, value]) => [filename(key), value.default])
 )
-console.log(images2);
+const fondos = import.meta.glob('/src/assets/img/fondos/*png', { eager: true })
+// console.log(glob);
+const imagesFondos = Object.fromEntries(
+  Object.entries(fondos).map(([key, value]) => [filename(key), value.default])
+)
     let fundadores = ref([
       {
         id:1,
@@ -396,7 +400,7 @@ function volver(params) {
     const { width, height } = useWindowSize();
     return {
       count, fundadores, coordinador, maestros, ayudantes, countProyects, countBack, windowWidth: width,
-      letNumber2,getInformation,volver,images2
+      letNumber2,getInformation,volver,images2,imagesFondos
     }
 
 

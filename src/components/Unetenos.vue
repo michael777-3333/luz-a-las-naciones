@@ -1,6 +1,6 @@
 <template >
     <div style="height: 100px; "></div>
-    <div class="container-fluid" style="background-image: url('/src/assets/img/fondos/fomdo.png')">
+    <div class="container-fluid" :style="{ 'background-image': 'url(' + imagesFondos.fomdo + ')' }">
             <div class="row ">
         
         <div class="col-12 d-flex justify-content-center">
@@ -54,6 +54,7 @@
 
 import {ref , computed, reactive} from "vue"
 import { useRouter, useRoute } from 'vue-router'
+import { filename } from 'pathe/utils'
 // import {MenuIcon} from 'vue-material-design-icons/Menu.vue';
 export default {
   setup() {
@@ -62,8 +63,14 @@ export default {
     function volver(params) {
         router.push({ path: '/', replace: true })
     }
+    const fondos = import.meta.glob('/src/assets/img/fondos/*png', { eager: true })
+// console.log(glob);
+const imagesFondos = Object.fromEntries(
+  Object.entries(fondos).map(([key, value]) => [filename(key), value.default])
+)
+    
 return{
-    volver
+    volver,imagesFondos
 }
 }
 

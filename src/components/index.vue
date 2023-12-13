@@ -607,6 +607,7 @@ const imagesFondos = Object.fromEntries(
   Object.entries(fondos).map(([key, value]) => [filename(key), value.default])
 )
 console.log(imagesFondos);
+console.log(imagesFondos.fomdo);
 let srcGaleriComplete = ref([
   images.galeria1,
   images.galeria2_fotor_20230624124312,
@@ -715,7 +716,7 @@ const { width, height } = useWindowSize();
 
     return {
       mision,
-      showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,showGalery,unetenos,
+      showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,showGalery,unetenos,fondos,
       openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros, glob,images,showDiv,sweetProyects,imagesFondos
     }
   }

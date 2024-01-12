@@ -4,45 +4,39 @@
   <div class="container-fluid" id="carrusel">
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner ">
-        <div class="carousel-item active ">
+        <div class="carousel-item active">
           <img src="/src/assets/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100 " alt="...">
           <div class="row titleCarrusel" style="color: #900D0D;  text-transform: uppercase;">
             <div class="col-12 divTitleLogo">
               <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12 ">
-              
-              <img v-show="showLogo" class="imgLogo" src="/src/assets/img/logo2.png" alt="">
+              <img v-show="showLogo" class="imgLogo" src="/src/assets/img/logo.png" alt="">
             </div>
-
           </div>
         </div>
-        <div class="carousel-item">
+        <div class="carousel-item ">
           <img src="/src/assets/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100" alt="...">
-          <div class="row titleCarrusel" style="color: #900D0D; width: 700px; text-transform: uppercase;">
+          <div class="row titleCarrusel" style="color: #900D0D;  text-transform: uppercase;">
             <div class="col-12 divTitleLogo">
               <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12">
-              <img v-show="showLogo" class="imgLogo " src="/src/assets/img/logo2.png" alt="">
+              <img v-show="showLogo" class="imgLogo" src="/src/assets/img/logo.png" alt="">
             </div>
-
           </div>
-
         </div>
         <div class="carousel-item">
           <img src="/src/assets/img/puenteTierra-fotor-202306231752.png" class="imgCarrusel d-block w-100" alt="...">
-          <div class="row titleCarrusel" style="color: #900D0D; width: 700px; text-transform: uppercase;">
+          <div class="row titleCarrusel" style="color: #900D0D; text-transform: uppercase;">
             <div class="col-12 divTitleLogo">
               <h1 class="titleLogo">Luz a las Naciones</h1>
             </div>
             <div class="col-12">
-              <img v-show="showLogo" class="imgLogo" src="/src/assets/img/logo2.png" alt="">
+              <img v-show="showLogo" class="imgLogo" src="/src/assets/img/logo.png" alt="">
             </div>
-
           </div>
         </div>
-
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -52,11 +46,8 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-
     </div>
-
   </div>
-
 
   <!-- mission, vision, history -->
   <div class="container-fluid" :style="{ 'background-image': 'url(' + imagesFondos.fomdo + ')' }">
@@ -141,15 +132,14 @@
     <div style="height: 100px;"></div>
   
   </div>
+
   <div style="display: none;">{{ count }}</div>
 
   <!-- PROYECTOS  -->
-
   <div class="container-fluid">
-
     <div class="row">
       <div class="col-xs-auto col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center"
-      :style="{ 'background-image': 'url(' + imagesFondos.fondonina5 + ')' }">
+      :style="{ 'background-image': 'url(' + imagesFondos.ninaFondo + ')' }">
         <div>
           <h1 class="titles" style="padding-left: 30px; color: #f8efed;">
             Propuestas
@@ -159,7 +149,7 @@
 
           </p>
           <button id="propuestas" class="btn btn-proyect mb-sm-3 mb-md-3 mb-lg-0"
-           @click="sweetProyects('propuestas')" style="margin-left: 30px; color: black; background-color: #f8efed;">Ver mas</button>
+           @click="sweetProyects('propuestas')" style="margin-left: 30px; color: black; background-color: #f8efed;">Leer más</button>
         </div>
 
 
@@ -180,7 +170,7 @@
       </div>
 
       <div class="col-xs-auto col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center align-items-center"
-      :style="{ 'background-image': 'url(' + imagesFondos.fondonino3 + ')' }">
+      :style="{ 'background-image': 'url(' + imagesFondos.ninoFondo + ')' }">
         <div>
           <h1 class="titles" style="padding-left: 30px; color: #f8efed;">
             Recursos
@@ -189,7 +179,7 @@
             Nuestros recursos que la fundacion Luz a las Naciones tiene mayormente llegan de la iglesia del pastor Juan Carlos Bennet...
           </p>
           <button value="recursos" id="recursos" class="btn btn-proyect mb-xs-3 mb-sm-3 mb-md-3 mb-lg-0"
-           @click="sweetProyects('recursos')" style="margin-left: 30px; color: black; background-color: #f8efed;">Leer mas</button>
+           @click="sweetProyects('recursos')" style="margin-left: 30px; color: black; background-color: #f8efed;">Leer más</button>
         </div>
       </div>
 
@@ -197,7 +187,6 @@
   </div>
 
   <!-- PROYECTOS2  -->
-
   <div class="container-fluid" :style="{ 'background-image': 'url(' + imagesFondos.fomdo + ')' }">
     <div class="row">
 
@@ -370,7 +359,7 @@
 
 
           </div>
-          <button class="btn btn-img d-flex justify-content-center">
+          <button class="btn btn-img d-flex justify-content-center" @click="pupVideo('show')">
             <i class="bi bi-arrow-up-right-circle" style="font-size: 30px; color: #fff;"></i>
           </button>
         </div>
@@ -402,7 +391,6 @@
   </div>
 
   <!-- GALERIA  -->
-
   <div class="container-fluid" style="background-color: #900D0D;" id="galeria">
     <div style="display:none">{{ windowWidth }}</div>
     <div style="height: 50px;"></div>
@@ -432,7 +420,7 @@
     <div style="height: 30px;"></div>
   </div>
 
-    <div class="row full-img" v-show="showSelectImg" style="display: flex;" id="filBox">
+  <div class="row full-img" v-show="showSelectImg" style="display: flex;" id="filBox">
        <div style="height: 20px;"></div>
        <div class="col-10 d-flex justify-content-end">
         <button class="btn btn" style="color: #fff; font-size: 40px;">
@@ -453,11 +441,30 @@
               <i class="bi bi-arrow-right-circle-fill" @click="nextImg()"></i>
             </button>
           </div>
+  </div>
+
+  <div class="row container_modal animate__animated animate__backInDown" v-show="showVideo" style="display: flex;">
+   <div class="row">
+    <div class="col d-flex justify-content-between">
+      <button class="btn btn" style="background-color: transparent;" @click="pupVideo('dontShow')">
+      <i class="bi bi-x-circle" style="color: #000000; font-size: 60px;"></i>
+    </button>
+    </div>
+    
+   </div>
+    
+    <div v-if="showVideo==true" class="col-12 d-flex justify-content-center" >
+      <video style="width: 50%; height: 600px;" autoplay  controls="true">
+        <source src="/src/assets/video/testimonios.mp4" type="video/mp4">
+      </video>
+      
     </div>
 
+    <div v-else="showVideo==false"></div>
+    
+  </div>
 
   <!-- FOOTER  -->
-
   <div class="container-fluid" style="background-color: #f8efed;" id="contactanos">
     <section id="contactanos">
       <div style="height: 50px;"></div>
@@ -596,6 +603,7 @@ let count = ref(0)
 let showDiv=ref(false)
 let pasadorProyectos = ref(false)
 let letNewLap=ref(false)
+let showVideo= ref(false)
 const glob = import.meta.glob('/src/assets/img/galeria2/*png', { eager: true })
 // console.log(glob);
 const images = Object.fromEntries(
@@ -619,6 +627,16 @@ let srcGaleriComplete = ref([
   images.galeria7_fotor_20230624124444,
   images.galeria8_fotor_20230624124516 
 ])
+
+function pupVideo(refer) {
+  if (refer=='show') {
+    showVideo.value= true  
+  }else{
+    showVideo.value=false
+  }
+  
+
+}
 
 function openFullimg(refer) {
   imgSelect.value=refer
@@ -718,8 +736,8 @@ const { width, height } = useWindowSize();
 
     return {
       mision,
-      showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,showGalery,unetenos,fondos,showLogo,
-      openFullimg, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros, glob,images,showDiv,sweetProyects,imagesFondos
+      showNav, windowWidth: width, animateAboutUs, imgSelect, showSelectImg, indexGlery, nextImgSrc, prevuisImg, pasadorProyectos,showGalery,unetenos,fondos,showLogo,pupVideo,
+      openFullimg,showVideo, closeImg, nextImg, srcGaleriComplete, previousImageSrc, previusIndex, count, countProyects, countBack,maestros, glob,images,showDiv,sweetProyects,imagesFondos
     }
   }
 

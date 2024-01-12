@@ -452,6 +452,7 @@
     </div>
     
    </div>
+   <div style="display: none;"></div>
     
     <div v-if="showVideo==true" class="col-12 d-flex justify-content-center" >
       <video style="width: 50%; height: 500px;" autoplay  controls="true">

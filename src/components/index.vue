@@ -454,8 +454,8 @@
    </div>
     
     <div v-if="showVideo==true" class="col-12 d-flex justify-content-center" >
-      <video style="width: 50%; height: 600px;" autoplay  controls="true">
-        <source src="/src/assets/video/testimonios.mp4" type="video/mp4">
+      <video style="width: 50%; height: 500px;" autoplay  controls="true">
+        <source src="/src/assets/video/testimonios2.mp4" type="video/mp4">
       </video>
       
     </div>
